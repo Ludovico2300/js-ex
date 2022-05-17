@@ -1,9 +1,12 @@
 function canPlay() {
-  
-  let personName = 'Paul';
-  // tolto if poichè let e const sono block scoped, quindi non 
-  // accessibili all'esterno del proprio blocco, in questo caso if
-  
+  let personName = "Ludo";
+  if (true) {
+    personName = "Paul";
+  }
+
+  // per risolvere il quesito posso dichiarare personName all'esterno del blocco di if e 
+  // assegnare il valore al suo interno per evitare shadowing oppure eliminare direttamente
+  // il blocco if
 
   personName += ' plays football'; // Argh! personName is not defined
 
