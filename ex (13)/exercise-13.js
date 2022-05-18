@@ -4,6 +4,9 @@
 
 const sum = (a, b) => {return a + b;}
 
+// in questo caso omettere return non è possibile, perchè la funzione sum ha come scopo finale 
+// la concatenazione e l'operazione matematica, e non un semplice "riporto" del valore
+
 
 // const subtract = function (a, b) {
 //   return a - b;
