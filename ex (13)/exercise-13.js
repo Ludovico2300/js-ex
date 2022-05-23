@@ -2,29 +2,28 @@
 //   return a + b;
 // }
 
-const sum = (a, b) => {return a + b;}
+const sum = (a, b) => a + b;
 
-// in questo caso omettere return non è possibile, perchè la funzione sum ha come scopo finale 
-// la concatenazione e l'operazione matematica, e non un semplice "riporto" del valore
+// posso usare la forma contratta poichè la funzione eseguirebbe un return
 
 
 // const subtract = function (a, b) {
 //   return a - b;
 // }
 
-const subtract = (a, b) => {return a - b;}
+const subtract = (a, b) => a - b;
 
 // const multiply = function (a, b) {
 //   return a * b;
 // }
 
-const multiply = (a, b) => {return a * b;}
+const multiply = (a, b) => a * b;
 
 // const divide = function (a, b) {
 //   return a / b;
 // }
 
-const divide = (a, b) => {return a / b;}
+const divide = (a, b) => a / b;
 
 // const log = function (value) {
 //   console.log(value);
