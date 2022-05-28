@@ -1,11 +1,3 @@
-
-
-function adultFilter(item) {
-  persons.filter (item => item.age >= 18);
-//  item.filter (item => item.age >= 18);
-} 
-// NON CAPISCO COME INSERIRE IL FILTRO NELLA FUNZIONE ??
-
 const persons = [
   { name: 'Paul', age: 16 },
   { name: 'George', age: 17 },
@@ -19,10 +11,7 @@ const persons = [
   { name: 'Alice', age: 28 }
 ];
 
-// const adults = persons.filter (item => item.age >= 18);
-
-const adults = adultFilter(persons); 
-
+const adults = persons.filter (item => item.age >= 18);
 
 // console.log(persons);
 
