@@ -18,7 +18,23 @@ class Circle {
 }
 
 class AreaCalculator {
-  // ...
+  static calculate(form){
+
+    if (form === square) {
+      let area = square.side * square.side;
+      return area;
+    }
+    else if (form === rectangle) {
+      let area = rectangle.width * rectangle.height;
+      return area;
+    }
+    else if (form === circle) {
+      let area = 3.14 * circle.radius;
+      return area;
+    }
+
+  }
+
 }
 
 const square = new Square(4);
