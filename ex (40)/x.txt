@@ -1,1 +1,2 @@
 x
+non capisco il funzionamento di get e set..
