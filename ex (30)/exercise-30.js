@@ -1,6 +1,7 @@
-// function nicknameMap(item) {
-//   item.map(({ name, age}) => ( `${name}-${age} `));
-// }
+function nicknameMap(persons) {
+  const nicknames = persons.map(({ name, age}) => ( `${name}-${age} `));
+  return nicknames;
+}
 // non capisco come mettere dentro alla funzione
 
 const persons = [
@@ -17,9 +18,5 @@ const persons = [
 ];
 
 
-const nicknames = persons.map(({ name, age}) => ( `${name}-${age} `));
 
-
-// const nicknames = nicknameMap(persons);
-console.log(persons);
-console.log(nicknames);
+console.log(nicknameMap(persons));
