@@ -2,7 +2,7 @@ function nicknameMap(persons) {
   const nicknames = persons.map(({ name, age}) => ( `${name}-${age} `));
   return nicknames;
 }
-// non capisco come mettere dentro alla funzione
+
 
 const persons = [
   { name: 'Paul', age: 16 },
