@@ -9,31 +9,30 @@ class Person {
     return `${this.firstName} ${this.lastName}`;
   }
 
-  // get firstName(){
-  //   return this.firstName;
-  // }
+  get firstName(){
+    return this._firstName;
+  }
 
-  // get lastName(){
-  //   return this.lastName;
-  // }
+  get lastName(){
+    return this._lastName;
+  }
 
-  //  get age(){
-  //   return this.age;
-  // }
+  get age(){
+    return this._age;
+  }
 
-  //  set firstName(value){
-  //   this.firstName = value;
-  // }
+  set firstName(value){
+    this._firstName = value;
+  }
 
-  // set lastName(value){
-  //   this.lastName = value;
-  // }
+  set lastName(value){
+    this._lastName = value;
+  }
 
-  // set age(value){
-  //   this.age = value;
-  // }
+  set age(value){
+    this._age = value;
+  }
 
-  // non capisco il funzionamento di get e set
 
 }
 

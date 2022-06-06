@@ -4,8 +4,8 @@ class Person {
     this.lastName = lastName;
   }
 
-  static fromObject (){
-    
+  static fromObject (obj){
+    return new Person(obj.firstName, obj.lastName);
   }
 }
 
@@ -15,4 +15,8 @@ const obj = {
 };
 
 const person = Person.fromObject(obj);
+
+// const person = new Person("Ludovico", "Colucci");
+
+
 console.log(`${person.firstName} ${person.lastName}`);
