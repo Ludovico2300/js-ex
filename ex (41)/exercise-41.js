@@ -7,20 +7,20 @@ class BankAccount {
 
   deposit(amount) {
     if (amount < 0) {
-      console.warn("Valore negativo non valido!");
-    } else {
+      throw new Error("Valore negativo non valido!");
+    } 
       this.#amount += amount;
-    }
+  
     // throw an exception if amount is negative
     
   }
 
   withdraw(amount) {
     if (amount>this.#amount) {
-      console.warn("Saldo non disponibile!");
-    } else {
+      throw new Error("Saldo non disponibile!");
+    } 
       this.#amount -= amount;
-    }
+    
     // throw an exception if amount is negative or if withdrawal amount is greater than current amount
     
   }
