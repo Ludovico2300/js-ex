@@ -9,8 +9,9 @@ class BankAccount {
     if (amount < 0) {
       throw new Error("Valore negativo non valido!");
     } 
+    else{
       this.#amount += amount;
-  
+    }
     // throw an exception if amount is negative
     
   }
@@ -19,7 +20,9 @@ class BankAccount {
     if (amount>this.#amount) {
       throw new Error("Saldo non disponibile!");
     } 
+    else{
       this.#amount -= amount;
+    }
     
     // throw an exception if amount is negative or if withdrawal amount is greater than current amount
     
