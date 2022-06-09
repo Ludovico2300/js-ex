@@ -1,16 +1,17 @@
 function calculate() {
   let afterNum = 0;
+  
   function add (numAdd) {
-    return $this.afterNum + numAdd;
+    afterNum= $this.afterNum + numAdd;
   }
   function multiply(numMul) {
-    return $this.afterNum + numMul;
+    afterNum= $this.afterNum * numMul;
   }
-  function add(numSub) {
-    return $this.afterNum + numSub;
+  function sub(numSub) {
+    afterNum= $this.afterNum - numSub;
   }
-  function add(numDiv) {
-    return $this.afterNum + numDiv;
+  function divide(numDiv) {
+    afterNum= $this.afterNum / numDiv;
   }
   function printResult() {
     console.log($this.afterNum);
