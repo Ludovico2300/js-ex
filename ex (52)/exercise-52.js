@@ -5,6 +5,17 @@ const person = {
   age: 25,
 };
 
-const json = JSON.stringify(person);
+function replacer(key, value) {
+  // Filtering out properties
+  if (typeof value === 'string') {
+    return undefined;
+  }
+  return value;
+}
+
+//con replacer filtro i valori di person in modo da ottenere solo i numeri
+
+
+const json = JSON.stringify(person, replacer);
 
 console.log(json); // Should return: { id: 1, age: 25 }
