@@ -1,1 +1,19 @@
-1
+esempio closure
+
+function initCounter (){
+    let count = 0; //inizializzo un contatore a 0
+    return function incrementCounter(increment){ //restituisco una funzione (closure)
+        //questa ha accesso alla variabile esterna count e ne ricorda il valore, anche le sue variazioni
+        count += increment;
+        return count;
+    }
+}
+
+increment = initCounter();
+secondIncrement = initCounter();
+
+console.log(increment(1)); //counter sarà 1
+console.log(increment(1)); //counter sarà 2
+console.log(increment(3)); //counter sarà 5
+
+console.log(secondIncrement(1)) //counter sarà 1
