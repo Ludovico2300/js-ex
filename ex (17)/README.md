@@ -3,6 +3,9 @@ Implementare la funzione `calculate` che restituisce un oggetto che dia la possi
 
 **TIP**: Per concatenare i metodi basta restituire il riferimento all'oggetto stesso (`$this`)
 
+Utilizza una variabile di appoggio, la quale aggiornerai dopo ogni operazione, inoltre la `outerFunction` dovrà restituire un oggetto con all'interno le funzioni per ogni operazione.
+
+
 Esempio:
 ```
 calculator

@@ -1,22 +1,27 @@
 function calculate() {
   let afterNum = 0;
-  
-  function add (numAdd) {
-    afterNum= $this.afterNum + numAdd;
+
+  let add = function (numAdd) {
+    this.afterNum= this.afterNum + numAdd;
   }
-  function multiply(numMul) {
+
+  let multiply = function(numMul) {
     afterNum= $this.afterNum * numMul;
   }
-  function sub(numSub) {
+  
+  let sub = function (numSub) {
     afterNum= $this.afterNum - numSub;
   }
-  function divide(numDiv) {
+
+  let divide = function (numDiv) {
     afterNum= $this.afterNum / numDiv;
   }
-  function printResult() {
+
+  let printResult = function () {
     console.log($this.afterNum);
   }
 }
 
 const calculator = calculate();
-calculator.add(2).add(4).multiply(3).sub(1).sub(3).divide(2).printResult(); // Il risultato sarà: 7
+console.log(calculator(2));
+// .multiply(3).sub(1).sub(3).divide(2).printResult(); // Il risultato sarà: 7
