@@ -8,14 +8,7 @@ class BankAccount {
   deposit(amount) {
 
     if (amount < 0) {
-      try {
-        throw new Error('The amount provided cannot be negative');
-
-      } catch (error) {
-        console.log("name", error.name);
-        console.log("message", error.message);
-      }
-
+      throw new Error('The amount provided cannot be negative');
     } else {
       this.#amount += amount;
     }
@@ -55,7 +48,12 @@ class BankAccount {
 
 // Handle errors to avoid app crash
 const bankAccount = new BankAccount(1000);
-bankAccount.deposit(-500);
+try {
+  bankAccount.deposit(-500);
+} catch (error) {
+  console.log("name", error.name);
+  console.log("message", error.message);
+}
 bankAccount.deposit(200);
 bankAccount.withdraw(10000);
 bankAccount.view();
