@@ -2,8 +2,9 @@ function memoize(fn) {
   let cache = { 1: 1 };
   return function factorialCache(n) {
     if (n in cache) {
-      
+
       return cache[n];
+
     }
     else {
       let temp = fn(n);

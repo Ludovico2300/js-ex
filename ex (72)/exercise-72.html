@@ -1,24 +1,36 @@
 <html>
-  <body>
-    <div id="container">
-      <form>
-        <div>
-          <label>First Name:</label>
-          <input type="text" class="form-input" id="firstName" value="Mario"/>
-        </div>
-        <div>
-          <label>Last Name:</label>
-          <input type="text" class="form-input" id="lastName" value="Rossi"/>
-        </div>
-        <div>
-          <label>Age:</label>
-          <input type="number" class="form-input" id="age" value="25"/>
-        </div>
-      </form>
-    </div>
-  </body>
+
+<body>
+  <div id="container">
+    <form>
+      <div>
+        <label>First Name:</label>
+        <input type="text" class="form-input" id="firstName" value="Mario" />
+      </div>
+      <div>
+        <label>Last Name:</label>
+        <input type="text" class="form-input" id="lastName" value="Rossi" />
+      </div>
+      <div>
+        <label>Age:</label>
+        <input type="number" class="form-input" id="age" value="25" />
+      </div>
+    </form>
+  </div>
+</body>
+
 </html>
 
 <script>
-  // code here
+  const person = {};
+  const firstnameEL = document.querySelector("#firstName").value;
+  person.firstName = firstnameEL;
+  const lastnameEL = document.querySelector("#lastName").value;
+  person.lastName = lastnameEL;
+  const ageEL = document.querySelector("#age").value;
+  person.age = ageEL;
+  console.log(person);
+
+  const formEL = document.querySelector("form");
+  formEL.setAttribute("data-person", JSON.stringify(person));
 </script>
