@@ -1,14 +1,73 @@
 <html>
-  <body>
-    <div id="container">
-      <h2>Person's Form</h2>
-      <form id="person-form">
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  </body>
+
+<body onload="initForm()">
+  <div id="container">
+    <h2>Person's Form</h2>
+    <form id="person-form">
+      <button type="submit" onclick="submitPersonForm()">Submit</button>
+    </form>
+  </div>
+</body>
+
 </html>
 
 <script>
-  // Code here
+  const personFormEl = document.querySelector("#person-form");
+  function initForm() {
+
+    personFormEl.setAttribute("method", "post");
+    personFormEl.setAttribute("action", "submit.php");
+
+    // Create an input element for First Name
+    const FN = document.createElement("input");
+    FN.setAttribute("class", "first-name");
+    FN.setAttribute("type", "text");
+    FN.setAttribute("name", "firstName");
+    FN.setAttribute("placeholder", "First Name");
+
+    // Create an input element for Last Name
+    const LN = document.createElement("input");
+    LN.setAttribute("class", "last-name");
+    LN.setAttribute("type", "text");
+    LN.setAttribute("name", "lastName");
+    LN.setAttribute("placeholder", "Last Name");
+
+    // Create an input element for Last Name
+    const AGE = document.createElement("input");
+    AGE.setAttribute("class", "age");
+    AGE.setAttribute("type", "number");
+    AGE.setAttribute("name", "age");
+    AGE.setAttribute("placeholder", "Age");
+
+
+    // Append the first name input to the form
+    personFormEl.append(FN);
+
+    // Append the last name input to the form
+    personFormEl.append(LN);
+
+    // Append the age input to the form
+    personFormEl.append(AGE);
+
+  }
+
+
+  function submitPersonForm() {
+    const btnSubmit = document.querySelector("button");
+    btnSubmit.setAttribute("type", "button");
+
+
+    const person = {};
+   
+      const fnEl = document.querySelector(".first-name");
+      person.firstName = (fnEl.value);
+      const lnEl = document.querySelector(".last-name");
+      person.lastName = (lnEl.value);
+      const ageEl = document.querySelector(".age");
+      person.age = (ageEl.value);
+
+      console.log(person);
+    };
+  
+
 </script>

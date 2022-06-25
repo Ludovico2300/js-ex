@@ -1,10 +1,26 @@
 function uncompletedNotes(notes) {
-  notes.forEach(item, index, notes => {
-    if (notes[i]) {
-      
-    }
-  });
+ for (let index = 0; index < notes.length; index++) {
+  
+  
+ }
 }
+
+// ---------------------------------------
+// removeFromCart: prende l'id di un prodotto e ne rimuove una unità dal carrello. Se quantity diventa 0, rimuove il prodotto dall'array
+// ---------------------------------------
+// */
+
+// function removeFromCart(id) {
+// for (let index = 0; index < productsInCart.length; index++) {
+//     if (productsInCart[index].id == id) {
+//         productsInCart[index].quantity = productsInCart[index].quantity - 1;
+//         if (productsInCart[index].quantity == 0) {
+//             delete productsInCart[index];
+//         }
+//     }
+// }
+// return productsInCart;
+// }
 
 const notes = [
   {

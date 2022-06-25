@@ -1,1 +1,2 @@
-1
+1.in che senso (contenente un campo di 
+testo per ciascuna colonna: `firstName`, `lastName` e `age`.)?
