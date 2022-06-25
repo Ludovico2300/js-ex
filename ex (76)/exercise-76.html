@@ -1,18 +1,32 @@
 <html>
-  <body>
-    <div id="container">
-      <h2>Hero's List</h2>
-      <ul class="hero-list">
-        <li class="hero-list-item">Batman</li>
-        <li class="hero-list-item">Superman</li>
-        <li class="hero-list-item">Spiderman</li>
-        <li class="hero-list-item">Hulk</li>
-        <li class="hero-list-item">Wolverine</li>
-      </ul>
-    </div>
-  </body>
+
+<body>
+  <div id="container">
+    <h2>Hero's List</h2>
+    <ul class="hero-list">
+      <li class="hero-list-item">Batman</li>
+      <li class="hero-list-item">Superman</li>
+      <li class="hero-list-item">Spiderman</li>
+      <li class="hero-list-item">Hulk</li>
+      <li class="hero-list-item">Wolverine</li>
+    </ul>
+  </div>
+</body>
+
 </html>
 
 <script>
-  // code here
+  const LIEl = document.getElementsByClassName("hero-list-item");
+  for (let index = 0; index < LIEl.length; index++) {
+    LIEl[index].addEventListener('mouseover', function handleMouseOver() {
+      LIEl[index].style.color = 'red';
+    });
+    LIEl[index].addEventListener('mouseout', function handleMouseOut() {
+      LIEl[index].style.color = 'black';
+    });
+
+  }
+
+
+
 </script>
