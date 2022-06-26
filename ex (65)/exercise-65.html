@@ -1,15 +1,42 @@
 <html>
-  <body>
-    <div id="container">
-      <button type="button" id="fetch-post">
-        Fetch Post from LocalStorage
-      </button>
 
-      <h2>Post: <span id="post-title"></span></h2>
-    </div>
-  </body>
+<body>
+  <div id="container">
+    <button type="button" id="fetch-post" onclick="getPostAsync()">
+      Fetch Post from LocalStorage
+    </button>
+
+    <h2>Post: <span id="post-title"></span></h2>
+  </div>
+</body>
+
 </html>
 
 <script>
-  // code here
+  let ciao = { "saluto": "ciao" };
+  let resp;
+  function getPostAsync() {
+    // scarica post
+    fetch("https://jsonplaceholder.typicode.com/posts/1")
+      .then(response => response.json())
+      .then(json => {
+        resp = JSON.stringify(json);
+        console.log(resp);
+
+        // salva post
+        localStorage.setItem("item", resp);
+
+        // visualizza post
+        const post = localStorage.getItem("item");
+        const spanEl = document.getElementById("post-title");
+        const respParsed = JSON.parse(post);
+        spanEl.innerHTML = respParsed.body;
+      })
+
+  }
+
+
+
+
+
 </script>
