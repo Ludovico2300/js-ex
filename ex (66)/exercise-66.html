@@ -25,7 +25,7 @@
       // visualizza post
       const post = localStorage.getItem("item");
       const spanEl = document.getElementById("post-title");
-      const respParsed = JSON.parse(post);//crea l'oggetto respParsed
+      const respParsed = JSON.parse(post);//crea ARRAY respParsed
       for (let index = 0; index < respParsed.length; index++) {
         const liEl = document.createElement("li");
         ulEl.append(liEl);
