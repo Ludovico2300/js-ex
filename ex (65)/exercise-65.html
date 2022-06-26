@@ -30,7 +30,7 @@
         const post = localStorage.getItem("item");
         const spanEl = document.getElementById("post-title");
         const respParsed = JSON.parse(post);
-        spanEl.innerHTML = respParsed.body;
+        spanEl.innerHTML = respParsed.title;
       })
 
   }
