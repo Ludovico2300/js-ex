@@ -1,27 +1,3 @@
-function uncompletedNotes(notes) {
- for (let index = 0; index < notes.length; index++) {
-  
-  
- }
-}
-
-// ---------------------------------------
-// removeFromCart: prende l'id di un prodotto e ne rimuove una unità dal carrello. Se quantity diventa 0, rimuove il prodotto dall'array
-// ---------------------------------------
-// */
-
-// function removeFromCart(id) {
-// for (let index = 0; index < productsInCart.length; index++) {
-//     if (productsInCart[index].id == id) {
-//         productsInCart[index].quantity = productsInCart[index].quantity - 1;
-//         if (productsInCart[index].quantity == 0) {
-//             delete productsInCart[index];
-//         }
-//     }
-// }
-// return productsInCart;
-// }
-
 const notes = [
   {
     id: 1,
@@ -72,6 +48,8 @@ const notes = [
   }
 ]
 
+function uncompletedNotes(notes) {
+  return notes.map(note => note.todos.filter(item => item.done === false))
+}
 const notesInProgress = uncompletedNotes(notes);
-console.log('All notes: ', notes);
-console.log('Notes In Progress: ', notesInProgress);
+console.log("Note da completare:", notesInProgress);
