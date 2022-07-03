@@ -71,12 +71,10 @@
     form.addEventListener("submit", submitPersonForm);
   }
 
+  const personFormLoaded = new Event("loadedStatus")
+  window.addEventListener("loadedStatus", () => console.log("Person Form Loaded!"));
+
   window.addEventListener("DOMContentLoaded", initForm);
-
-  function personFormLoaded(){
-    console.log("Person Form Loaded");
-  }
-
+  window.dispatchEvent(personFormLoaded);
   
-  window.addEventListener("DOMContentLoaded", personFormLoaded);
 </script>

@@ -6,17 +6,38 @@
     <table id="person-table">
       <tbody></tbody>
     </table>
-    <button id="add-row" onclick="addOnClick()">Add row</button>
+    <button id="add-row">Add row</button>
   </div>
 </body>
 
 </html>
 
 <script>
+  const btn = document.getElementById('add-row').addEventListener('click', addOnClick);
+
   function addOnClick (){
-  const tbodyEl = document.querySelector("tbody");
-  const newtrNode = document.createElement("tr");
-  newtrNode.innerText = "prova";
-  tbodyEl.append(newtrNode);
+    const tableBodyEL = document.querySelector('tbody');
+   
+    const tableRowEL = document.createElement('tr'); 
+    const tableFirstNameEL = document.createElement('td');
+    const tableLastNameEL = document.createElement('td');
+    const tableAgeEL = document.createElement('td');
+
+
+    tableFirstNameEL.style.border = '1px solid black';
+    tableFirstNameEL.style.padding = '10px 20px';
+    tableLastNameEL.style.border = '1px solid black';
+    tableLastNameEL.style.padding = '10px 20px';
+    tableAgeEL.style.border = '1px solid black';
+    tableAgeEL.style.padding = '10px 40px';
+
+
+    tableFirstNameEL.textContent = 'Firstname';
+    tableLastNameEL.textContent = 'Lastname';
+    tableAgeEL.textContent = 'Age';
+
+
+    tableBodyEL.append(tableRowEL);
+    tableRowEL.append(tableFirstNameEL, tableLastNameEL, tableAgeEL);
   }
 </script>
