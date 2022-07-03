@@ -1,22 +1,49 @@
 <html>
-  <body>
-    <div id="container">
-      <form>
-        <div>
-          <label>Title</label>
-          <input type="text" id="todo-title" />
-        </div>
-        <div>
-          <label>Completed</label>
-          <input type="checkbox" id="todo-completed" />
-        </div>
 
-        <button type="submit" id="submit-todo"></button>
-      </form>
-    </div>
-  </body>
+<body>
+  <div id="container">
+    <form>
+      <div>
+        <label>Title</label>
+        <input type="text" id="todo-title" />
+      </div>
+      <div>
+        <label>Completed</label>
+        <input type="checkbox" id="todo-completed" />
+      </div>
+
+      <button type="submit" id="submit-todo"></button>
+    </form>
+  </div>
+</body>
+
 </html>
 
 <script>
-  // code here
+  const titleInputEL = document.querySelector("#todo-title");
+  const checkInputEL = document.querySelector("#todo-completed");
+
+  function request() {
+
+    const objToPost = {
+      title: titleInputEL.value,
+      completed: checkInputEL.checked
+    };
+
+    fetch("https://jsonplaceholder.typicode.com/posts", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(objToPost),
+    })
+    console.log(objToPost);
+  }
+
+  const btn = document.querySelector("#submit-todo")
+    .addEventListener("click", (event) => {
+      request();
+      event.preventDefault();
+    });
 </script>
